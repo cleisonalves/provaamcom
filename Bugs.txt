@@ -1,0 +1,33 @@
+Esse docuemnto é apenas para mostrar que eu encontrei essas incosistencias que no momento não posso me referir como Bug
+Por motivo de não ter uma regra de negócios com critérios de aceite bem desenvolvidos.
+
+E como estou subindo em um .txt não consigo colocar aqui envidências como video e imagem.
+
+BUGS:
+
+1
+Comportamento encontrado
+
+Dado que estou no formulário 3
+Quando verifico o titulo do formulario
+Então o titulo esta errado apresentando o nome Formulario 1 no lugar de formulario 3
+
+Comportamento esperado
+
+Dado que estou no formulário 3
+Quando verifico o titulo do formulario
+Então o titulo deve ser formulario 3
+
+2
+Comportamento encontrado
+
+Dado que estou no formulário 1
+Quando envio o formulario com os dados em branco
+Então o formulario é enviado e o modal de enviado com sucesso aparece
+
+Comportamento esperado
+
+Dado que estou no formulário 1
+Quando envio o formulario com os dados em branco
+Então o formulário não deve ser enviado
+E um alerta de erro de preenchimento deve aparecer
