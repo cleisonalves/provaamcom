@@ -1,0 +1,102 @@
+Casos de testes escritos em Gherkin:
+
+Funcionalidade 1:
+
+	Formulário 1 - Submissão de Dados:Um usuário deve poder preencher o nome, sobrenome e telefone e clicar no botão 'Enviar'. Isso deve abrir um modal com a mensagem "Enviado com sucesso". O usuário deve ser capaz de fechar o modal clicando no botão de fechar.
+
+Cenário 01: [Formulário1] Enviar o formulario com os dados completos
+
+Dado que o usuário está na tela do formulário 1
+Quando preencher todos os dados
+E envia
+Então deve aparecer o modal com a mensagem Enviado com sucesso
+
+Cenário 02: [Formulário1] Enviar apenas com o nome preenchido
+
+Dado que o usuário está na tela do formulário 1
+Quando preencher apenas o campo nome
+E envia
+Então deve aparecer o modal com a mensagem Enviado com sucesso
+
+Cenário 03: [Formulário1] Enviar apenas com o Sobrenome preenchido
+
+Dado que o usuário está na tela do formulário 1
+Quando preencher apenas o campo Sobrenome
+E envia
+Então deve aparecer o modal com a mensagem Enviado com sucesso
+
+Cenário 04: [Formulário1] Enviar apenas com o Telefone preenchido
+
+Dado que o usuário está na tela do formulário 1
+Quando preencher apenas o campo Telefone
+E envia
+Então deve aparecer o modal com a mensagem Enviado com sucesso
+
+Cenário 05: [Formulário1] Fechar a mensagem do modal 1
+
+Dado que o modal com a mensagem Enviado com sucesso aparece para o usuário
+Quando o usuário fecha o modal
+Então o modal deve sumir da tela e permanecer na tela de formulário
+
+
+Funcionalidade 2:
+
+	Formulário 2 - Seleção de Cor:Um usuário deve ser capaz de selecionar uma cor (azul, amarelo, vermelho) de um combo box. Ao selecionar uma cor, o fundo do formulário deve mudar para a cor selecionada.
+
+Cenário 01: [Formulário2] Escolher background azul
+
+Dado que o usuário está na tela do formulário 2
+Quando seleciona a cor azul
+Então o formulario deve ficar com o background azul
+
+Cenário 02: [Formulário2] Escolher background amarelo
+
+Dado que o usuário está na tela do formulário 2
+Quando seleciona a cor amarelo
+Então o formulario deve ficar com o background amarelo
+
+Cenário 03: [Formulário2] Escolher background vermelho
+
+Dado que o usuário está na tela do formulário 2
+Quando seleciona a cor vermelho
+Então o formulario deve ficar com o background vermelho
+
+Funcionalidade 3:
+
+	Formulário 3 - Mensagem de Horário:Um usuário deve ser capaz de clicar em um botão que exibe uma mensagem de saudação dependendo da hora do dia. Antes do meio-dia, deve mostrar "Bom dia". Após o meio-dia, mas antes das 18:00, deve mostrar "Boa tarde". Após as 18:00, deve mostrar "Boa noite".
+	
+Cenário 01: [Formulário3] Verificar a saudação de Bom dia no horario 00:00
+
+Given que o usuário está na tela do formulário 3
+When a hora atual está entre 00:00h
+Then a mesagem de saudação deve aparecer como Bom dia
+
+Cenário 02:[Formulário3] Verificar a saudação de Bom dia no horario 11:59
+
+Given que o usuário está na tela do formulário 3
+When a hora atual está entre 11:59h
+Then a mesagem de saudação deve aparecer como Bom dia
+
+Cenário 03:[Formulário3] Verificar a saudação de Bom dia no horario 12:00
+
+Given que o usuário está na tela do formulário 3
+When a hora atual está entre 12:00h
+Then a mesagem de saudação deve aparecer como Boa tarde
+
+Cenário 04:[Formulário3] Verificar a saudação de Bom dia no horario 17:59
+
+Given que o usuário está na tela do formulário 3
+When a hora atual está entre 17:59h
+Then a mesagem de saudação deve aparecer como Boa tarde
+
+Cenário 05:[Formulário3] Verificar a saudação de Bom dia no horario 18:00
+
+Given que o usuário está na tela do formulário 3
+When a hora atual está entre 18:00h
+Then a mesagem de saudação deve aparecer como Boa noite
+
+Cenário 06:[Formulário3] Verificar a saudação de Bom dia no horario 23:59
+
+Given que o usuário está na tela do formulário 3
+When a hora atual está entre 23:59h
+Then a mesagem de saudação deve aparecer como Boa noite
